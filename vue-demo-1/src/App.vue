@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <h1><a href="#/">组件</a></h1>
     <router-view/>
   </div>
 </template>
@@ -19,5 +19,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width: 500px;
+  height: 500px;
 }
 </style>
