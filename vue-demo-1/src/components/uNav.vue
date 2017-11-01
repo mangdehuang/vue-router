@@ -1,7 +1,7 @@
 <template>
   <div class="uNav" @click="clickNav">
     <el-row>
-      <el-col :span="24"><div class="grid-content bg-purple-dark" :class="{active:isActive}">{{label}}</div></el-col>
+      <el-col :span="24"><div class="grid-content bg-purple-dark" :class="{active:item.active}">{{item.label}}</div></el-col>
     </el-row>
   </div>
 </template>
@@ -10,17 +10,22 @@
       name:'uNav',
       data(){
           return{
-              isActive:false
           }
       },
       props:{
           label:{
               default:'nav'
-          }
+          },
+          item:{
+
+          },
+          index:{}
       },
       methods:{
         clickNav(){
-            this.isActive = true;
+            this.item.active = true;
+            this.item.index = this.index;
+            this.$emit('navClick',this.item);
         }
       }
   }
