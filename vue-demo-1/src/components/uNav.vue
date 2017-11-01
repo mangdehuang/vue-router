@@ -16,9 +16,7 @@
           label:{
               default:'nav'
           },
-          item:{
-
-          },
+          item:{},
           index:{}
       },
       methods:{
